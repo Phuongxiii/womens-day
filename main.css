@@ -36,13 +36,38 @@
   background-position: 0px;
   height: 100px;
   width: 100px;
+  position: relative;
   cursor: pointer;
+}
+
+.wish-card {
+    position: absolute;
+    top: 70px;
+    left: -150px;
+    text-align: center;
+    display: none;
+    color: #221b11;
+    background-color: #fd9090;
+    height: 150px;
+    border-radius:10px;
+    box-shadow: #221b11;
+    width: 400px;
+}
+
+.wish-card h4 {
+    padding: 8px;
 }
 
 .heart:hover {
   background-position: right;
   transition: background-position 1s steps(28);
   animation: heart-animate 1s steps(28) forwards;
+}
+
+.heart:hover .wish-card {
+    display: block;
+    transition: ease 1s steps(28);
+    animation: backwards 2s steps(28); 
 }
 
 @keyframes heart-animate {
